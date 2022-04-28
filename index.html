@@ -191,7 +191,29 @@
 					</div>
 
 			</div>
+			
+			<script data-config type="text/javascript">
+				window.addEventListener('DOMContentLoaded', function() {
+					document.addEventListener('visibilitychange', function() {
+						switch(document.visibilityState) {
+						case 'hidden':
+							document.title = "(´Д｀) 不要走!!";
+							clearTimeout(titleTime);
+						break;
+						case 'visible':
+							document.title = "（●´3｀●）你回來了";
+							titleTime = setTimeout(function () {
+							document.title = "你好，我是CB｜𝐃𝐫𝐞𝐚𝐦𝐂𝐢𝐭𝐲";
+							}, 2000);
+						break;
+						}
+					});
 
+				});
+
+
+</script>
+		  
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
